@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mashallah Mashkhas</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background: linear-gradient(to right, #f00, #f80080, #000);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+    }
+
+    .container {
+      width: 80%;
+      max-width: 500px;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .quotes h1 {
+      font-size: 3em; /* Title font size remains the same */
+      margin-bottom: 20px;
+      color: #000; /* Black */
+    }
+
+    .quotes p {
+      /* Increase font size of quotes to 3 times the original size */
+      font-size: 2.5em; /* 1.2em * 3 */
+      margin-bottom: 30px;
+    }
+
+    button {
+      background-color: #f80080;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      color: #fff;
+      cursor: pointer;
+      float: right;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="quotes">
+      <h1>Mashallah Mashkhas</h1>
+      <p id="quote">Your beauty shines brighter than any jewel, Mashkhas.</p>
+      <button onclick="changeQuote()">Press Me</button>
+    </div>
+  </div>
+  <script>
+    const quotes = [
+      "Your beauty shines brighter than any jewel, Mashkhas.",
+      "Your eyes hold the depth of a thousand starry nights, Mashkhas.",
+      "A single smile from you could light up the entire world, Mashkhas.",
+      "You are the embodiment of grace and elegance, Mashkhas.",
+      "My heart beats only for you, Mashkhas.",
+      "You are a vision of perfection, Mashkhas.",
+      "You are more beautiful than words can express, Mashkhas."
+    ];
+
+    let currentQuote = 0;
+
+    function changeQuote() {
+      document.getElementById("quote").innerHTML = quotes[currentQuote];
+      currentQuote = (currentQuote + 1) % quotes.length;
+    }
+  </script>
+</body>
+</html>
